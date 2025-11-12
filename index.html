@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ahmad Hassan — DevOps & Cloud Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+    :root {
+      --bg: #030617;
+      --accent: #00bfff;
+      --accent2: #2E9EF7;
+    }
+    body {
+      font-family: Inter, ui-sans-serif;
+      background: var(--bg);
+      color: #e8f2ff;
+      overflow-x: hidden;
+      transition: background 0.3s, color 0.3s;
+    }
+    .gradient-text {
+      background: linear-gradient(to right, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+    }
+    .btn {
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all .3s ease;
+    }
+    .btn-primary {
+      background: #2563eb;
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      border: 1px solid #475569;
+      color: #e2e8f0;
+      background: rgba(0,0,0,0.4);
+    }
+    .btn-outline:hover {
+      background: #475569;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .slider-container {overflow:hidden;white-space:nowrap;position:relative;}
+    .slider-track {display:inline-flex;animation:scroll 25s linear infinite;}
+    .slider-track img {height:70px;width:70px;margin:0 25px;opacity:.85;transition:transform .3s, opacity .3s;}
+    .slider-track img:hover{transform:scale(1.1);opacity:1;}
+    @keyframes scroll {0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+    .dark-mode {background:#f4f4f4;color:#111827;}
+    .dark-mode nav {background:#e2e8f0 !important;color:#111827 !important;}
+  </style>
+</head>
+<body class="transition-all duration-500">
+
+<!-- Navbar -->
+<nav id="navbar" class="fixed w-full top-0 left-0 z-50 bg-[#0a0f19]/90 backdrop-blur-md shadow-lg border-b border-slate-800">
+  <div class="max-w-6xl mx-auto flex justify-between items-center h-16 px-6 text-white">
+    
+    <!-- Logo -->
+    <h1 class="flex items-center text-2xl font-bold space-x-3">
+      <div class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center text-black font-extrabold shadow-lg border border-slate-700">
+        A/H
+      </div>
+      <span class="text-white">Ahmad Hassan</span>
+    </h1>
+
+    <!-- Desktop Menu -->
+    <div id="menu" class="hidden md:flex space-x-8 text-[16px] font-medium">
+      <a href="#about" class="hover:text-cyan-300 transition-colors duration-300">About</a>
+      <a href="#skills" class="hover:text-cyan-300 transition-colors duration-300">Skills</a>
+      <a href="#projects" class="hover:text-cyan-300 transition-colors duration-300">Projects</a>
+      <a href="#experience" class="hover:text-cyan-300 transition-colors duration-300">Experience</a>
+      <a href="#education" class="hover:text-cyan-300 transition-colors duration-300">Education</a> <!-- ✅ Added -->
+      <a href="#certificates" class="hover:text-cyan-300 transition-colors duration-300">Certificates</a>
+      <a href="#contact" class="hover:text-cyan-300 transition-colors duration-300">Contact</a>
+    </div>
+
+    <!-- Right Buttons -->
+    <div class="flex items-center space-x-4">
+      <button id="themeToggle" class="text-2xl hover:text-cyan-400 transition" title="Toggle theme">🌙</button>
+      <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-md font-semibold transition hidden md:block">
+        Get in Touch
+      </a>
+      <button id="menuToggle" class="md:hidden text-3xl">☰</button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden bg-[#0a0f19] md:hidden flex flex-col items-center space-y-4 py-4 text-white text-lg">
+    <a href="#about" class="hover:text-cyan-300">About</a>
+    <a href="#skills" class="hover:text-cyan-300">Skills</a>
+    <a href="#projects" class="hover:text-cyan-300">Projects</a>
+    <a href="#experience" class="hover:text-cyan-300">Experience</a>
+    <a href="#education" class="hover:text-cyan-300">Education</a> <!-- ✅ Added -->
+    <a href="#certificates" class="hover:text-cyan-300">Certificates</a>
+    <a href="#contact" class="hover:text-cyan-300">Contact</a>
+    <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-md font-semibold">Get in Touch</a>
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+<header class="h-screen flex flex-col justify-center items-center text-center relative overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('./DevOps_cloud_tech_background_2ba050a7-T6lhRs8Q.png');"></div>
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+
+  <div class="relative z-10 max-w-2xl mx-auto px-4" data-aos="fade-up">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-lg">AHMAD HASSAN</h1>
+    <h2 class="text-lg md:text-xl text-cyan-300 mb-4 font-semibold drop-shadow-md">
+      Full-Stack DevOps | Cloud | Platform Engineer
+    </h2>
+
+    <div class="mb-8 inline-block bg-black/25 px-4 py-2 rounded-lg shadow-md">
+  <a href="https://github.com/AhmadHassan" target="_blank">
+    <img
+      src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=18&duration=2800&pause=1000&color=00BFFF&center=true&vCenter=true&width=700&lines=%F0%9F%91%8B+Hey+There!+I'm+Ahmad+Hassan;%F0%9F%9A%80+DevOps+%26+Cloud+Engineer;%F0%9F%92%BB+2%2B+Years+of+Experience+in+Automation+%26+CI%2FCD;%F0%9F%94%90+Currently+Working+as+a+DevSecOps+Engineer;%F0%9F%8C%9F+Let's+Build+Something+Amazing!"
+      alt="Typing Animation"
+      class="mx-auto"
+    />
+  </a>
+</div>
+
+
+    <div class="flex justify-center gap-4">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="AhmadH Resume.pdf" class="btn btn-outline">Download Resume</a>
+    </div>
+  </div>
+</header>
+
+  <!-- DevOps Tools Slider -->
+  <section class="section text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6 gradient-text">DevOps Stacks</h2>
+    <div class="slider-container">
+      <div class="slider-track">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg" alt="Azure">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg" alt="GCP">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="Docker">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes">
+        <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="Jenkins">
+        <img src="https://www.vectorlogo.zone/logos/gitlab/gitlab-icon.svg" alt="GitLab">
+        <img src="https://www.vectorlogo.zone/logos/github/github-icon.svg" alt="GitHub">
+        <img src="https://www.vectorlogo.zone/logos/terraformio/terraformio-icon.svg" alt="Terraform">
+        <img src="https://www.vectorlogo.zone/logos/ansible/ansible-icon.svg" alt="Ansible">
+        <img src="https://www.vectorlogo.zone/logos/prometheusio/prometheusio-icon.svg" alt="Prometheus">
+        <img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" alt="Grafana">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python">
+        <img src="https://www.vectorlogo.zone/logos/linux/linux-icon.svg" alt="Linux">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg" alt="Bash">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+<section id="about" class="py-20 bg-[rgba(255,255,255,0.02)]" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-10 gradient-text">About Me</h2>
+
+  <div class="max-w-3xl mx-auto text-center">
+    <p class="text-slate-300 text-lg leading-relaxed mb-12">
+      I’m a <span class="text-cyan-400 font-semibold">DevOps Engineer</span> with over <span class="font-semibold">2 years</span> of hands-on 
+      experience in cloud engineering and automation.  
+      I specialize in deploying secure workloads across <span class="text-cyan-400">AWS</span> and <span class="text-cyan-400">Azure</span>, 
+      optimizing performance, and streamlining deployment pipelines.  
+      I’m passionate about automation, CI/CD, and building <span class="text-cyan-400">self-healing infrastructure</span> that enhances 
+      system reliability and resilience.
+    </p>
+
+    <!-- Stats Cards -->
+    <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-6 justify-center">
+      <!-- Card 1 -->
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:scale-105 transition-transform">
+        <div class="text-3xl mb-2 text-cyan-400">⚡</div>
+        <h3 class="text-2xl font-bold text-white">2+</h3>
+        <p class="text-slate-400 text-sm mt-1">Years Experience</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:scale-105 transition-transform">
+        <div class="text-3xl mb-2 text-cyan-400">💻</div>
+        <h3 class="text-2xl font-bold text-white">15+</h3>
+        <p class="text-slate-400 text-sm mt-1">Projects Completed</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:scale-105 transition-transform">
+        <div class="text-3xl mb-2 text-cyan-400">🏅</div>
+        <h3 class="text-2xl font-bold text-white">5</h3>
+        <p class="text-slate-400 text-sm mt-1">Certifications</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 hover:scale-105 transition-transform">
+        <div class="text-3xl mb-2 text-cyan-400">👥</div>
+        <h3 class="text-2xl font-bold text-white">3</h3>
+        <p class="text-slate-400 text-sm mt-1">Teams Worked With</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="section bg-[#0a0f19] text-white" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-16 gradient-text">🧠 Technical Skills</h2>
+
+  <div class="max-w-5xl mx-auto grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
+
+    <!-- Cloud Platforms -->
+    <div
+      class="glass p-6 rounded-2xl border border-slate-800 text-center transition-transform duration-300 ease-in-out 
+             cursor-pointer hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+      <div class="text-4xl mb-3">☁️</div>
+      <h3 class="font-semibold text-xl mb-2">Cloud Platforms</h3>
+      <p class="text-slate-400 text-sm mb-4">AWS, Azure, GCP</p>
+    </div>
+
+    <!-- Containers & Orchestration -->
+    <div
+      class="glass p-6 rounded-2xl border border-slate-800 text-center transition-transform duration-300 ease-in-out 
+             cursor-pointer hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+      <div class="text-4xl mb-3">🐳</div>
+      <h3 class="font-semibold text-xl mb-2">Containers & Orchestration</h3>
+      <p class="text-slate-400 text-sm mb-4">Docker, Kubernetes, Helm</p>
+    </div>
+
+    <!-- CI/CD Tools -->
+    <div
+      class="glass p-6 rounded-2xl border border-slate-800 text-center transition-transform duration-300 ease-in-out 
+             cursor-pointer hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+      <div class="text-4xl mb-3">⚙️</div>
+      <h3 class="font-semibold text-xl mb-2">CI/CD & Automation</h3>
+      <p class="text-slate-400 text-sm mb-4">Jenkins, GitHub Actions, ArgoCD</p>
+    </div>
+
+    <!-- Infrastructure as Code -->
+    <div
+      class="glass p-6 rounded-2xl border border-slate-800 text-center transition-transform duration-300 ease-in-out 
+             cursor-pointer hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+      <div class="text-4xl mb-3">🏗️</div>
+      <h3 class="font-semibold text-xl mb-2">Infrastructure as Code</h3>
+      <p class="text-slate-400 text-sm mb-4">Terraform, Ansible, CloudFormation</p>
+    </div>
+
+    <!-- Monitoring & Logging -->
+    <div
+      class="glass p-6 rounded-2xl border border-slate-800 text-center transition-transform duration-300 ease-in-out 
+             cursor-pointer hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+      <div class="text-4xl mb-3">📊</div>
+      <h3 class="font-semibold text-xl mb-2">Monitoring & Logging</h3>
+      <p class="text-slate-400 text-sm mb-4">Prometheus, Grafana, ELK Stack</p>
+    </div>
+
+    <!-- Scripting & Languages -->
+    <div
+      class="glass p-6 rounded-2xl border border-slate-800 text-center transition-transform duration-300 ease-in-out 
+             cursor-pointer hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+      <div class="text-4xl mb-3">💻</div>
+      <h3 class="font-semibold text-xl mb-2">Scripting & Programming</h3>
+      <p class="text-slate-400 text-sm mb-4">Python, Bash, YAML, PowerShell</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+ <!-- Projects Section -->
+<section id="projects" class="section bg-[#0a0f19] text-white" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-16 gradient-text">🚀 Featured Projects</h2>
+
+  <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 max-w-6xl mx-auto">
+    
+    <!-- 1. Autonomous Self-Healing Infrastructure -->
+    <div
+      class="glass p-6 rounded-2xl border border-slate-800 transition-transform duration-300 ease-in-out cursor-pointer 
+             hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+      <div class="flex items-center mb-3">
+        <span class="text-blue-500 text-2xl mr-2">🤖</span>
+        <h3 class="font-semibold text-xl">Autonomous Self-Healing Infrastructure</h3>
+      </div>
+      <p class="text-slate-400 text-sm mb-4">
+        Intelligent system that monitors and auto-heals infrastructure using Terraform, Ansible, and Prometheus. 
+        Implements self-repairing pipelines for fault tolerance.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="tag">Terraform</span>
+        <span class="tag">Ansible</span>
+        <span class="tag">Prometheus</span>
+        <span class="tag">Automation</span>
+      </div>
+      <a href="https://github.com/AhmadProjects-git/Autonomous-SelfHealing-Infrastructure" target="_blank"
+         class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition">
+        View Details
+      </a>
+    </div>
+
+    <!-- 2. CI/CD Pipeline for Microservices -->
+    <div
+      class="glass p-6 rounded-2xl border border-slate-800 transition-transform duration-300 ease-in-out cursor-pointer 
+             hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+      <div class="flex items-center mb-3">
+        <span class="text-blue-500 text-2xl mr-2">🧩</span>
+        <h3 class="font-semibold text-xl">CI/CD Pipeline for Microservices</h3>
+      </div>
+      <p class="text-slate-400 text-sm mb-4">
+        Build a full CI/CD pipeline using Jenkins or GitHub Actions to deploy Dockerized microservices to Kubernetes on AWS or GCP.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="tag">Jenkins</span>
+        <span class="tag">GitHub Actions</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Kubernetes</span>
+      </div>
+      <a href="#" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition">
+        View Details
+      </a>
+    </div>
+
+    <!-- 3. Three-Tier Application Deployment -->
+    <div
+      class="glass p-6 rounded-2xl border border-slate-800 transition-transform duration-300 ease-in-out cursor-pointer 
+             hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+      <div class="flex items-center mb-3">
+        <span class="text-blue-500 text-2xl mr-2">🌐</span>
+        <h3 class="font-semibold text-xl">Three-Tier Application Deployment</h3>
+      </div>
+      <p class="text-slate-400 text-sm mb-4">
+        Deploy a scalable three-tier web application on AWS EKS using Terraform and Kubernetes, ensuring high availability and security.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="tag">EKS</span>
+        <span class="tag">Terraform</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">AWS</span>
+      </div>
+      <a href="https://github.com/AhmadProjects-git/ThreeTierAppDeployment-EKS" target="_blank"
+         class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition">
+        View Details
+      </a>
+    </div>
+
+    <!-- 4. Infrastructure as Code with Terraform -->
+    <div
+      class="glass p-6 rounded-2xl border border-slate-800 transition-transform duration-300 ease-in-out cursor-pointer 
+             hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+      <div class="flex items-center mb-3">
+        <span class="text-blue-500 text-2xl mr-2">⚙️</span>
+        <h3 class="font-semibold text-xl">Infrastructure as Code with Terraform</h3>
+      </div>
+      <p class="text-slate-400 text-sm mb-4">
+        Automate provisioning of AWS infrastructure (VPC, EC2, S3, RDS) using Terraform modules and integrate with Ansible for configuration.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="tag">Terraform</span>
+        <span class="tag">Ansible</span>
+        <span class="tag">IaC</span>
+        <span class="tag">AWS</span>
+      </div>
+      <a href="#" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition">
+        View Details
+      </a>
+    </div>
+
+    <!-- 5. Serverless Application on AWS -->
+    <div
+      class="glass p-6 rounded-2xl border border-slate-800 transition-transform duration-300 ease-in-out cursor-pointer 
+             hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+      <div class="flex items-center mb-3">
+        <span class="text-blue-500 text-2xl mr-2">⚡</span>
+        <h3 class="font-semibold text-xl">Serverless Application on AWS</h3>
+      </div>
+      <p class="text-slate-400 text-sm mb-4">
+        Create a serverless API using AWS Lambda, API Gateway, and DynamoDB for high scalability and cost efficiency.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="tag">AWS Lambda</span>
+        <span class="tag">API Gateway</span>
+        <span class="tag">DynamoDB</span>
+        <span class="tag">Serverless</span>
+      </div>
+      <a href="#" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition">
+        View Details
+      </a>
+    </div>
+
+    <!-- 6. Multi-Cloud Deployment -->
+    <div
+      class="glass p-6 rounded-2xl border border-slate-800 transition-transform duration-300 ease-in-out cursor-pointer 
+             hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+      <div class="flex items-center mb-3">
+        <span class="text-blue-500 text-2xl mr-2">☁️</span>
+        <h3 class="font-semibold text-xl">Multi-Cloud Deployment</h3>
+      </div>
+      <p class="text-slate-400 text-sm mb-4">
+        Deploy an application across AWS and GCP with consistent configuration using Terraform and CI/CD automation.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="tag">AWS</span>
+        <span class="tag">GCP</span>
+        <span class="tag">Terraform</span>
+        <span class="tag">CI/CD</span>
+      </div>
+      <a href="#" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition">
+        View Details
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Experience Section -->
+<section id="experience" class="section relative" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Professional Experience</h2>
+
+  <div class="max-w-5xl mx-auto relative">
+    <!-- Vertical Timeline Line -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 h-full border-l border-blue-800 opacity-40"></div>
+
+    <!-- Experience 1 (Left) -->
+    <div class="mb-16 flex flex-col md:flex-row items-center w-full">
+      <div class="w-full md:w-1/2 md:pr-8 text-right md:text-right">
+        <div
+          class="glass p-6 md:ml-auto md:w-[95%] border border-slate-800 
+                 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+          <div class="flex items-center justify-end mb-2">
+            <span class="text-blue-500 text-2xl ml-2">💼</span>
+            <h3 class="font-semibold text-xl text-white">
+              Associate Cloud Engineer
+              <span class="text-xs bg-blue-600 text-white px-2 py-1 ml-2 rounded-full">Current</span>
+            </h3>
+          </div>
+          <p class="text-slate-400 text-sm mb-1">CommPro Technologies Inc</p>
+          <p class="text-slate-500 text-xs mb-4">Feb 2025 – Present</p>
+          <ul class="list-disc text-left text-slate-300 text-sm leading-relaxed ml-5">
+            <li>Leading cloud infrastructure modernization across AWS and Azure.</li>
+            <li>Implemented automated deployment pipelines reducing deployment time by 60%.</li>
+            <li>Architected multi-region disaster recovery solutions for critical applications.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Timeline Node -->
+      <div class="relative w-0 md:w-[4%] flex justify-center items-center">
+        <div class="w-4 h-4 bg-blue-500 rounded-full border-4 border-[#0a0f19] z-10"></div>
+      </div>
+    </div>
+
+    <!-- Experience 2 (Right) -->
+    <div class="mb-16 flex flex-col md:flex-row items-center w-full">
+      <!-- Empty left side to balance -->
+      <div class="hidden md:block w-1/2"></div>
+
+      <!-- Timeline Node -->
+      <div class="relative w-0 md:w-[4%] flex justify-center items-center">
+        <div class="w-4 h-4 bg-blue-500 rounded-full border-4 border-[#0a0f19] z-10"></div>
+      </div>
+
+      <!-- Card on right side -->
+      <div class="w-full md:w-1/2 md:pl-8 text-left">
+        <div
+          class="glass p-6 md:mr-auto md:w-[95%] border border-slate-800 
+                 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+          <div class="flex items-center mb-2">
+            <span class="text-blue-500 text-2xl mr-2">💼</span>
+            <h3 class="font-semibold text-xl text-white">DevOps Engineer – Intern</h3>
+          </div>
+          <p class="text-slate-400 text-sm mb-1">Corvit Systems</p>
+          <p class="text-slate-500 text-xs mb-4">Jul 2022 – Dec 2023</p>
+          <ul class="list-disc text-left text-slate-300 text-sm leading-relaxed ml-5">
+            <li>Developed CI/CD pipelines using Jenkins and GitHub Actions.</li>
+            <li>Automated infrastructure provisioning with Terraform and Ansible.</li>
+            <li>Collaborated with teams to implement secure automation strategies.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Certificates Section -->
+<section id="certificates" class="section bg-[rgba(255,255,255,0.02)]" data-aos="fade-up">
+  <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Licenses & Certifications</h2>
+
+  <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-8 max-w-6xl mx-auto px-4">
+
+    <!-- Certificate 1 -->
+    <a href="https://www.credly.com/users/ahmad-hassan.b46211a4" target="_blank" class="glass border border-slate-800 p-6 rounded-2xl hover:scale-105 hover:shadow-[0_0_25px_rgba(56,189,248,0.3)] transition-all duration-300 group">
+      <div class="flex items-center justify-center mb-3 text-3xl text-cyan-400 group-hover:rotate-6 transition-transform duration-300">🤖</div>
+      <h4 class="font-semibold text-cyan-400 text-center">Explore Generative AI with the Vertex AI Gemini API</h4>
+      <p class="text-slate-400 text-center text-sm mt-2">Google Cloud Skills Boost</p>
+      <p class="text-slate-500 text-center text-xs mt-1">Issued Nov 2025</p>
+    </a>
+
+    <!-- Certificate 2 -->
+    <a href="https://www.credly.com/users/ahmad-hassan.b46211a4" target="_blank" class="glass border border-slate-800 p-6 rounded-2xl hover:scale-105 hover:shadow-[0_0_25px_rgba(37,99,235,0.3)] transition-all duration-300 group">
+      <div class="flex items-center justify-center mb-3 text-3xl text-blue-400 group-hover:-rotate-6 transition-transform duration-300">☁️</div>
+      <h4 class="font-semibold text-blue-400 text-center">AWS Certified Cloud Practitioner</h4>
+      <p class="text-slate-400 text-center text-sm mt-2">Amazon Web Services (AWS)</p>
+      <p class="text-slate-500 text-center text-xs mt-1">Issued Oct 2025</p>
+    </a>
+
+    <!-- Certificate 3 -->
+    <a href="https://www.credly.com/users/ahmad-hassan.b46211a4" target="_blank" class="glass border border-slate-800 p-6 rounded-2xl hover:scale-105 hover:shadow-[0_0_25px_rgba(34,197,94,0.3)] transition-all duration-300 group">
+      <div class="flex items-center justify-center mb-3 text-3xl text-green-400 group-hover:rotate-6 transition-transform duration-300">🌿</div>
+      <h4 class="font-semibold text-green-400 text-center">AWS Academy Graduate – Cloud Foundations</h4>
+      <p class="text-slate-400 text-center text-sm mt-2">Amazon Web Services (AWS)</p>
+      <p class="text-slate-500 text-center text-xs mt-1">Issued Jun 2025</p>
+    </a>
+
+    <!-- Certificate 4 -->
+    <div class="glass border border-slate-800 p-6 rounded-2xl hover:scale-105 hover:shadow-[0_0_25px_rgba(249,115,22,0.3)] transition-all duration-300 group">
+      <div class="flex items-center justify-center mb-3 text-3xl text-orange-400 group-hover:-rotate-6 transition-transform duration-300">🧩</div>
+      <h4 class="font-semibold text-orange-400 text-center">DevOps Engineer Expert</h4>
+      <p class="text-slate-400 text-center text-sm mt-2">Corvit Systems</p>
+      <p class="text-slate-500 text-center text-xs mt-1">Issued Oct 2023</p>
+    </div>
+
+    <!-- Certificate 5 -->
+    <div class="glass border border-slate-800 p-6 rounded-2xl hover:scale-105 hover:shadow-[0_0_25px_rgba(139,92,246,0.3)] transition-all duration-300 group">
+      <div class="flex items-center justify-center mb-3 text-3xl text-purple-400 group-hover:rotate-6 transition-transform duration-300">🐧</div>
+      <h4 class="font-semibold text-purple-400 text-center">Certified Linux Administrator</h4>
+      <p class="text-slate-400 text-center text-sm mt-2">Great Learning</p>
+      <p class="text-slate-500 text-center text-xs mt-1">Issued Feb 2023</p>
+    </div>
+
+    <!-- Certificate 6 -->
+    <div class="glass border border-slate-800 p-6 rounded-2xl hover:scale-105 hover:shadow-[0_0_25px_rgba(236,72,153,0.3)] transition-all duration-300 group">
+      <div class="flex items-center justify-center mb-3 text-3xl text-pink-400 group-hover:-rotate-6 transition-transform duration-300">🛡️</div>
+      <h4 class="font-semibold text-pink-400 text-center">Introduction to Cyber Security</h4>
+      <p class="text-slate-400 text-center text-sm mt-2">Cisco Networking Academy</p>
+      <p class="text-slate-500 text-center text-xs mt-1">Issued Aug 2022</p>
+    </div>
+  </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="section text-center" data-aos="fade-up">
+  <h2 class="text-4xl font-bold mb-10 gradient-text">Education</h2>
+
+  <div class="max-w-3xl mx-auto bg-slate-900/60 border border-slate-800 rounded-2xl p-8 
+              shadow-lg hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] 
+              hover:scale-[1.03] transition-all duration-500 ease-in-out text-left">
+
+    <div class="flex items-center space-x-5 mb-4">
+      <div class="w-14 h-14 flex items-center justify-center rounded-2xl 
+                  bg-gradient-to-r from-blue-600 to-cyan-400 
+                  shadow-md text-white text-3xl">
+        🎓
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold text-white">Bachelor of Science in Computer Science (Hons)</h3>
+        <p class="text-slate-400 text-sm">National College of Business & E-Commerce, Lahore</p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-3 mb-4">
+      <span class="bg-slate-800 text-cyan-300 text-sm font-semibold px-3 py-1 rounded-md border border-slate-700">
+        GPA: 3.8 / 4.0
+      </span>
+      <span class="bg-slate-800 text-blue-300 text-sm font-semibold px-3 py-1 rounded-md border border-slate-700">
+        Expected Dec 2025
+      </span>
+    </div>
+
+    <div>
+      <h4 class="text-slate-300 font-semibold mb-3">Relevant Coursework:</h4>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-slate-800/80 text-slate-200 text-sm px-3 py-1 rounded-md border border-slate-700 hover:border-cyan-400 transition-all duration-300">Cloud Computing</span>
+        <span class="bg-slate-800/80 text-slate-200 text-sm px-3 py-1 rounded-md border border-slate-700 hover:border-cyan-400 transition-all duration-300">DevOps Practices</span>
+        <span class="bg-slate-800/80 text-slate-200 text-sm px-3 py-1 rounded-md border border-slate-700 hover:border-cyan-400 transition-all duration-300">Network Security</span>
+        <span class="bg-slate-800/80 text-slate-200 text-sm px-3 py-1 rounded-md border border-slate-700 hover:border-cyan-400 transition-all duration-300">System Administration</span>
+        <span class="bg-slate-800/80 text-slate-200 text-sm px-3 py-1 rounded-md border border-slate-700 hover:border-cyan-400 transition-all duration-300">Database Management</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+<section id="contact" class="section text-center" data-aos="fade-up">
+  <h2 class="text-4xl font-bold mb-6 gradient-text">Let's Connect</h2>
+  <p class="text-slate-300 max-w-xl mx-auto mb-10 text-base md:text-lg">
+    I’m always open to discussing new projects, collaborations, or exciting technical challenges.
+  </p>
+
+  <div class="flex flex-wrap justify-center gap-4">
+    <a href="https://www.linkedin.com/in/ahmad-offical786/" target="_blank"
+       class="transform hover:scale-110 transition-transform duration-300 hover:drop-shadow-[0_0_10px_rgba(56,189,248,0.6)]">
+      <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=282C34"
+           alt="LinkedIn"
+           class="h-9 md:h-10">
+    </a>
+
+    <a href="mailto:ahmadhassanofficala@gmail.com" target="_blank"
+       class="transform hover:scale-110 transition-transform duration-300 hover:drop-shadow-[0_0_10px_rgba(239,68,68,0.6)]">
+      <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=282C34"
+           alt="Email"
+           class="h-9 md:h-10">
+    </a>
+
+    <a href="https://github.com/AhmadProjects-git" target="_blank"
+       class="transform hover:scale-110 transition-transform duration-300 hover:drop-shadow-[0_0_10px_rgba(156,163,175,0.6)]">
+      <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=282C34"
+           alt="GitHub"
+           class="h-9 md:h-10">
+    </a>
+
+    <a href="https://www.credly.com/users/ahmad-hassan.786/badges#credly" target="_blank"
+       class="transform hover:scale-110 transition-transform duration-300 hover:drop-shadow-[0_0_10px_rgba(249,115,22,0.6)]">
+      <img src="https://img.shields.io/badge/Credly-FF6F00?style=for-the-badge&logo=credly&logoColor=white&labelColor=282C34"
+           alt="Credly"
+           class="h-9 md:h-10">
+    </a>
+
+    <a href="https://x.com/ahmadismaild123" target="_blank"
+       class="transform hover:scale-110 transition-transform duration-300 hover:drop-shadow-[0_0_10px_rgba(29,155,240,0.6)]">
+      <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white&labelColor=282C34"
+           alt="Twitter"
+           class="h-9 md:h-10">
+    </a>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="bg-black border-t border-slate-800 text-slate-400 py-10 px-6 mt-16">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center text-white text-lg font-bold shadow-lg">
+        A/H
+      </div>
+      <h1 class="text-lg font-semibold text-white">Ahmad Hassan</h1>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="flex flex-wrap justify-center gap-5 text-sm font-medium">
+      <a href="#about" class="hover:text-cyan-400 transition">About</a>
+      <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
+      <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
+      <a href="#experience" class="hover:text-cyan-400 transition">Experience</a>
+      <a href="#certificates" class="hover:text-cyan-400 transition">Certificates</a>
+      <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="flex space-x-4">
+      <a href="https://github.com/AhmadProjects-git" target="_blank" 
+         class="hover:text-cyan-400 transition hover:scale-110 text-xl">
+         <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/ahmad-offical786/" target="_blank"
+         class="hover:text-cyan-400 transition hover:scale-110 text-xl">
+         <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://x.com/ahmadismaild123" target="_blank"
+         class="hover:text-cyan-400 transition hover:scale-110 text-xl">
+         <i class="fab fa-twitter"></i>
+      </a>
+      <a href="mailto:ahmadhassanofficala@gmail.com"
+         class="hover:text-cyan-400 transition hover:scale-110 text-xl">
+         <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Divider Line -->
+  <div class="border-t border-slate-800 mt-8 pt-6 text-center text-sm text-slate-500">
+  © 2025 <span class="text-cyan-400 font-semibold">Ahmad Hassan</span>. 
+  Designed and built with passion for DevOps, Cloud, and Automation.
+</div>
+
+</footer>
+
+  <script>
+    AOS.init({duration:800,once:true});
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    themeToggle.addEventListener('click',()=>{body.classList.toggle('dark-mode');themeToggle.textContent=body.classList.contains('dark-mode')?'☀️':'🌙';});
+    const menuToggle=document.getElementById('menuToggle');
+    const mobileMenu=document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click',()=>{mobileMenu.classList.toggle('hidden');});
+  </script>
+</body>
+</html>
